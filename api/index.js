@@ -31,7 +31,7 @@ app.use('/uploads',express.static(__dirname + '/uploads'));
 
 const corsOptions = {
     credentials: true,
-    origin: 'chat-app-ghiu-5paab474z-ishajain1408s-projects.vercel.app', // Replace with your frontend URL
+    origin: 'http://localhost:5173', // Replace with your frontend URL
 };
 
 app.use(cors(corsOptions));
