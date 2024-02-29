@@ -31,7 +31,7 @@ app.use('/uploads',express.static(__dirname + '/uploads'));
 
 const corsOptions = {
     credentials: true,
-    origin: 'http://localhost:5173', // Replace with your frontend URL
+    origin: 'https://chat-app-rust-nine-24.vercel.app', // Replace with your frontend URL
 };
 
 app.use(cors(corsOptions));

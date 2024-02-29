@@ -5,7 +5,6 @@ import { uniqBy } from "lodash";
 import axios from "axios";
 import Contact from "./Contact";
 import Profile from "./Profile";
-import {format} from 'date-fns';
 
 
 export default function Chat() {
@@ -28,7 +27,7 @@ export default function Chat() {
     connectToWs();
   }, []);
   function connectToWs() {
-    const newWs = new WebSocket("ws://localhost:4000");
+    const newWs = new WebSocket("wss://chat-app-1-gy38.onrender.com");
 
     setWs(newWs);
     newWs.addEventListener("message", handleMessage);
