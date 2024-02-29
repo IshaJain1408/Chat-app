@@ -39,7 +39,7 @@ app.use(cors(corsOptions));
 app.options('/register', (req, res) => {
     res.header('Access-Control-Allow-Methods', 'POST');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Origin', 'http://localhost:5173'); // Ensure this matches your frontend origin
+    res.header('Access-Control-Allow-Origin', 'https://chat-app-opal-phi.vercel.app/'); // Ensure this matches your frontend origin
     res.header('Access-Control-Allow-Credentials', 'true');
     res.status(204).send();
 });
@@ -123,7 +123,7 @@ app.get('/profile' , (req,res)=>{
 //     return jwt.sign({ userId, username }, process.env.JWT_SECRET);
 // };
 const generateLoginToken = (userId, username) => {
-    const token = jwt.sign({ userId, username }, jwtSecret, { expiresIn: '1h' });
+    const token = jwt.sign({ userId, username }, jwtSecret, { expiresIn: '24h' });
     return token;
 };
 
