@@ -31,7 +31,7 @@ app.use('/uploads',express.static(__dirname + '/uploads'));
 
 const corsOptions = {
     credentials: true,
-    origin: 'https://chat-app-rust-nine-24.vercel.app', // Replace with your frontend URL
+    origin: 'https://chat-app-rlo5.vercel.app/', // Replace with your frontend URL
 };
 
 app.use(cors(corsOptions));
@@ -39,7 +39,7 @@ app.use(cors(corsOptions));
 app.options('/register', (req, res) => {
     res.header('Access-Control-Allow-Methods', 'POST');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Origin', 'https://chat-app-opal-phi.vercel.app/'); // Ensure this matches your frontend origin
+    res.header('Access-Control-Allow-Origin', 'https://chat-app-rlo5.vercel.app'); // Ensure this matches your frontend origin
     res.header('Access-Control-Allow-Credentials', 'true');
     res.status(204).send();
 });
